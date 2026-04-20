@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service - Rules and conditions for using Pindl Pinterest Downloader.">
+    <title>Terms of Service - Pindl</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --red: #E60023;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: var(--red);
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-menu {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .mobile-menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu { display: flex; }
+            .mobile-menu-toggle { display: none; }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+            background: linear-gradient(135deg, #FFFFFF, #FF4D6B);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--red);
+        }
+
+        .section {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            margin-bottom: 16px;
+            color: #555;
+        }
+
+        footer {
+            background: var(--red);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">Pindl</a>
+        <div class="nav-menu">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about.html" class="nav-link">About</a>
+            <a href="/privacy.html" class="nav-link">Privacy</a>
+            <a href="/terms.html" class="nav-link">Terms</a>
+            <a href="/disclaimer.html" class="nav-link">Disclaimer</a>
+        </div>
+        <button class="mobile-menu-toggle">☰</button>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>Terms of Service</h1>
+</header>
+
+<section class="section">
+    <h2>Acceptance of Terms</h2>
+    <p>
+        By accessing and using Pindl, you agree to be bound by these Terms of Service.
+        If you do not agree, you must discontinue use immediately.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Use of Service</h2>
+    <p>
+        This service is provided for personal and non-commercial use only.
+        You agree not to misuse the platform or use it for illegal purposes.
+    </p>
+</section>
+
+<section class="section">
+    <h2>User Responsibility</h2>
+    <p>
+        You are solely responsible for how you use the content downloaded through this tool.
+        It is your responsibility to ensure compliance with applicable laws and copyright regulations.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Copyright Policy</h2>
+    <p>
+        Pindl does not host or store any content. All media is sourced directly from third-party platforms.
+        We do not claim ownership of any content.
+    </p>
+
+    <p>
+        Users must obtain proper permission from content owners before using downloaded material for commercial purposes.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Prohibited Activities</h2>
+    <p>
+        You agree not to use this service for:
+    </p>
+    <p>
+        - Violating intellectual property rights  
+        - Distributing copyrighted content without permission  
+        - Any unlawful or harmful activities  
+    </p>
+</section>
+
+<section class="section">
+    <h2>Limitation of Liability</h2>
+    <p>
+        We are not liable for any misuse of the service or consequences resulting from downloaded content.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Service Availability</h2>
+    <p>
+        We do not guarantee uninterrupted availability of the service and may modify or discontinue it at any time.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Changes to Terms</h2>
+    <p>
+        We reserve the right to update these terms at any time.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Contact</h2>
+    <p>
+        If you have any questions regarding these Terms, please contact us through the website.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Pindl. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelector('.mobile-menu-toggle').onclick = () => {
+    const menu = document.querySelector('.nav-menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+};
+</script>
+
+</body>
+</html>

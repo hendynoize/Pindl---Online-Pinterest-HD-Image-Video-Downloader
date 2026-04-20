@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Pindl - Learn more about our Pinterest downloader tool, mission, and how we provide a fast and secure experience.">
+    <title>About - Pindl</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --red: #E60023;
+            --dark-red: #B0001E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: var(--dark-red);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-menu {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .mobile-menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
+            }
+            .mobile-menu-toggle {
+                display: none;
+            }
+        }
+
+        .hero {
+
+            padding: 100px 20px 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--red);
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            margin-bottom: 20px;
+            color: #000;
+ text-align: left;
+        }
+
+        footer {
+            background: var(--dark-red);
+            color: white;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                   <img src="https://pindl.online/assets/header.png" alt="Logo">
+            </a>
+            
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-to-use" class="nav-link">How to Use</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="about" class="nav-link">About</a>
+                <a href="disclaimer" class="nav-link">Disclaimer</a>
+                <a href="privacy-policy" class="nav-link">Privacy Policy</a>
+                <a href="terms-of-service" class="nav-link">Terms Of Service</a>
+                <a href="contact" class="nav-link">Contact</a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+<!-- ADSENSE TOP -->
+<div style="text-align:center; margin:20px 0;">
+  <!-- kode adsense -->
+
+<!-- Hero -->
+<header class="hero">
+    <h1>About Pindl</h1>
+</header>
+
+<!-- Content -->
+<section class="section">
+    <h2 class="section-title">Who We Are</h2>
+    <p>
+        Pindl is a simple and user-friendly web tool designed to help users download publicly available images and videos from Pinterest.
+        Our goal is to provide a fast, clean, and reliable experience without requiring registration or software installation.
+    </p>
+
+    <p>
+        We focus on simplicity and accessibility, making it easy for anyone to use our tool across devices including smartphones, tablets, and desktops.
+    </p>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Our Mission</h2>
+    <p>
+        Our mission is to make online tools accessible, efficient, and easy to use for everyone.
+        We believe that useful tools should be simple, fast, and available without unnecessary barriers.
+    </p>
+
+    <p>
+        Pindl is built with a focus on performance and usability, ensuring a smooth experience for all users.
+    </p>
+</section>
+
+<section class="section">
+    <h2 class="section-title">How It Works</h2>
+    <p>
+        Pindl processes publicly accessible Pinterest links and retrieves media directly from their original sources.
+        We do not host or store any media files on our servers.
+    </p>
+
+    <p>
+        All downloads are handled in real-time, ensuring both speed and privacy for users.
+    </p>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Privacy & Responsibility</h2>
+    <p>
+        We respect user privacy. Pindl does not store personal data, download history, or media files.
+        Users are responsible for how they use downloaded content and should respect copyright and ownership.
+    </p>
+
+    <p>
+        This tool is intended for personal and educational use only.
+    </p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Pindl - Simple Pinterest Downloader Tool</p>
+    <div class="copyright">
+        © 2026 Pindl. All rights reserved.
+    </div>
+</footer>
+
+<!-- JS (ONLY NAV, TANPA DOWNLOADER) -->
+<script>
+document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+    const menu = document.querySelector('.nav-menu');
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+        menu.style.flexDirection = 'column';
+        menu.style.position = 'absolute';
+        menu.style.top = '70px';
+        menu.style.left = '0';
+        menu.style.background = '#E60023';
+        menu.style.width = '100%';
+        menu.style.padding = '20px';
+    }
+});
+</script>
+
+</body>
+</html>

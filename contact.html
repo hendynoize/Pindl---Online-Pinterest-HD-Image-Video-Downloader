@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Pindl - Reach out for support, questions, or feedback.">
+    <title>Contact Us - Pindl</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --red: #E60023;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .navbar {
+            background: var(--red);
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-menu {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .mobile-menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu { display: flex; }
+            .mobile-menu-toggle { display: none; }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+            background: linear-gradient(135deg, #FFFFFF, #FF4D6B);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--red);
+        }
+
+        .section {
+            max-width: 700px;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            background: var(--red);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background: var(--red);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">Pindl</a>
+        <div class="nav-menu">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about.html" class="nav-link">About</a>
+            <a href="/privacy.html" class="nav-link">Privacy</a>
+            <a href="/terms.html" class="nav-link">Terms</a>
+            <a href="/disclaimer.html" class="nav-link">Disclaimer</a>
+            <a href="/contact.html" class="nav-link">Contact</a>
+        </div>
+        <button class="mobile-menu-toggle">☰</button>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>Contact Us</h1>
+</header>
+
+<section class="section">
+    <p>
+        Got questions, feedback, or need help? We're here for you.
+        Feel free to reach out using the form below or via email.
+    </p>
+
+    <p><strong>Email:</strong> support@yourdomain.com</p>
+
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="successMsg" style="display:none; color:green; margin-top:15px;">
+        ✅ Message sent successfully!
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Pindl. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelector('.mobile-menu-toggle').onclick = () => {
+    const menu = document.querySelector('.nav-menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+};
+
+function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('successMsg').style.display = 'block';
+    e.target.reset();
+}
+</script>
+
+</body>
+</html>
