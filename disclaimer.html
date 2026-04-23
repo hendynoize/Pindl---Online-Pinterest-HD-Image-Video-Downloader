@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Disclaimer - Learn about the limitations, responsibilities, and legal notice regarding the use of Pindl.">
     <title>Disclaimer - Pindl</title>
+<meta name="robots" content="index, follow">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PinDl">
+  <meta name="application-name" content="PinDl">
 
+  <meta name="theme-color" content="#ffffff">
+    	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://pindl.online/assets/icon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://pindl.online/assets/icon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://pindl.online/assets/icon.png">
+	<link rel="apple-touch-icon-precomposed" href="https://pindl.online/assets/icon.png">
+	<link rel="shortcut icon" href="https://pindl.online/assets/icon.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-
         :root {
             --red: #E60023;
             --dark-red: #B0001E;
@@ -19,20 +28,22 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', system_ui, sans-serif;
             line-height: 1.6;
             color: #333;
             background: #f8f9fa;
+            overflow-x: hidden;
+
         }
 
         .navbar {
-            background: var(--red);
+            background: var(--dark-red);
             color: white;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(230, 0, 35, 0.3);
         }
 
         .nav-container {
@@ -40,29 +51,52 @@
             margin: 0 auto;
             padding: 1rem 1.5rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
-            color: white;
-            text-decoration: none;
-            font-size: 28px;
-            font-weight: 700;
-            font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    font-family: 'Playfair Display', serif;
+}
+
+.logo img {
+    height: 36px;       /* ukuran ideal logo */
+    width: auto;
+    display: block;
+}
+
+        .logo-dot {
+            color: #fff;
+            font-size: 32px;
         }
 
         .nav-menu {
             display: none;
             gap: 2rem;
+            align-items: center;
         }
 
         .nav-link {
             color: white;
             text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
         }
 
         .mobile-menu-toggle {
+            display: block;
             background: none;
             border: none;
             color: white;
@@ -80,66 +114,446 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #FFFFFF, #FF4D6B 100%);
+            background: #FFFFFF;
+            color: white;
             text-align: center;
-            padding: 100px 20px 60px;
+            padding: 100px 20px 80px;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
             color: var(--red);
         }
 
+        .hero h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--dark-red);
+        }
+
+        .download-section {
+            max-width: 800px;
+            margin: -60px auto 80px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px 10px rgba(0.4,0.4,0.4,0.4);
+            padding: 40px 30px;
+            position: relative;
+            z-index: 10;
+        }
+/* Blockquote dengan strip kiri */
+blockquote {
+  border-left: 6px solid #B0001E;
+  padding: 14px 18px;
+  margin: 20px 0;
+  background: #fff;
+  box-shadow: 4px 4px 12px rgba(4,4,0,0.05);
+  border-radius: 6px;
+}
+
+/* H1 tapi ukuran seperti H3 */
+h1 {
+  font-size: 1.75rem; /* setara H3 umum */
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        @media (min-width: 640px) {
+            .input-group {
+                flex-direction: row;
+            }
+        }
+
+        .url-input {
+            flex: 1;
+            padding: 18px 22px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .url-input:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 4px rgba(230, 0, 35, 0.1);
+        }
+
+        .download-btn {
+            background: var(--red);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .download-btn:hover {
+            background: var(--dark-red);
+            transform: translateY(-3px);
+        }
+
+        .loader {
+            display: none;
+            width: 28px;
+            height: 28px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .result-container {
+            margin-top: 30px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .media-container {
+            max-width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        video {
+            width: 100%;
+            max-height: 520px;
+            background: #000;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 520px;
+            object-fit: contain;
+            background: #f8f9fa;
+        }
+.logo-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+.logo-center img {
+    width: 250px;
+    height: auto;
+    display: block;
+}
+        .download-media-btn {
+            background: var(--red);
+            color: white;
+            border: none;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .download-media-btn:hover {
+            background: var(--dark-red);
+        }
+
         .section {
-            padding: 80px 20px;
-            max-width: 900px;
+            padding: 90px 20px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
             margin-bottom: 20px;
         }
 
-        .section p {
-            margin-bottom: 18px;
-            color: #555;
-            text-align: center;
+        .how-to {
+            background: #fff;
         }
 
-        footer {
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
             background: var(--red);
             color: white;
-            padding: 60px 20px 30px;
-            text-align: center;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq {
+            background: #f8f9fa;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 22px 30px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-answer {
+            padding: 0 30px 30px;
+            display: none;
+            color: #444;
+        }
+
+footer {
+max-width: 1280px;
+  background: var(--dark-red);
+  color: white;
+  padding: 20px;
+  width: 100%;
+  display: block;
+  margin-bottom: 0;
+}
+
+.footer-container {
+ max-width: 1280px;
+ margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+        @media (min-width: 768px) {
+            .footer-container {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            display: block;
+            padding: 6px 0;
+            transition: all 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: white;
+            padding-left: 6px;
         }
 
         .copyright {
-            margin-top: 30px;
-            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 0px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.95rem;
+            font-color: #fff;
             opacity: 0.8;
         }
+
+        .error-message {
+            color: #d32f2f;
+            margin-top: 15px;
+            text-align: center;
+        }
     </style>
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org",
+      "@graph": [
+          {
+              "@type": "WebSite",
+              "name": "PinDL",
+              "alternateName": [
+                  "Pinterest downloader",
+                  "PinDL",
+                  "PinDL APP",
+                  "pindl",
+                  "pindl.io"
+              ],
+              "url": "https://pindl.online"
+          },
+          {
+              "@type": "WebPage",
+              "name": "Pindl - Pinterest Downloader",
+              "speakable": {
+                  "@type": "SpeakableSpecification",
+                  "xpath": [
+                      "/html/head/title",
+                      "/html/head/meta[@name='description']/@content",
+                      "/html/body/main/section[1]/div/div[2]/h2",
+                      "/html/body/main/section[1]/div/div[2]/p",
+                      "/html/body/main/section[2]"
+                  ]
+              },
+              "inLanguage": "en",
+              "description": "Pindl - Free Pinterest HD Image & Video Downloader. Download high-quality images and videos from Pinterest pins instantly in one click. Fast, clean, and mobile-friendly.",
+              "url": "https://pindl.online"
+          },
+          {
+              "@type": "Organization",
+              "name": "PinDL",
+              "alternateName": "Pinterest downloader",
+              "url": "https://pindl.online",
+              "email": "support@pindl.online",
+              "logo": "https://pindl.online/assets/icon.png"
+          },
+          {
+              "@type": "WebApplication",
+              "name": "PinDL",
+              "alternateName": [
+               "pinterest downloader",
+               "pindown",
+               "pindl.app"
+              ],
+              "url": "https://pindl.online",
+              "image": "https://pindl.online/assets/icon.png",
+              "operatingSystem": "Windows, Linux, iOS, Android, OSX, macOS",
+              "applicationCategory": "UtilitiesApplication",
+              "featureList": [
+                  "Photo downloader",
+                  "image downloader",
+                  "Video Downloader"
+              ],
+              "contentRating": "Everyone",
+              "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.91",
+                  "reviewCount": "17283"
+              },
+              "offers": {
+                  "@type": "Offer",
+                  "price": "0"
+              }
+          }
+      ]
+  }
+
+</script>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="/" class="logo">Pindl</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                   <img src="https://pindl.online/assets/header.png" alt="Logo">
+            </a>
+            
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-to-use" class="nav-link">How to Use</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="about" class="nav-link">About</a>
+                <a href="disclaimer" class="nav-link">Disclaimer</a>
+                <a href="privacy-policy" class="nav-link">Privacy Policy</a>
+                <a href="terms-of-service" class="nav-link">Terms Of Service</a>
+                <a href="contact" class="nav-link">Contact</a>
+            </div>
 
-        <div class="nav-menu">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/about.html" class="nav-link">About</a>
-            <a href="/privacy.html" class="nav-link">Privacy</a>
-            <a href="/terms.html" class="nav-link">Terms</a>
-            <a href="/disclaimer.html" class="nav-link">Disclaimer</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
         </div>
-
-        <button class="mobile-menu-toggle">☰</button>
-    </div>
-</nav>
+    </nav>
 
 <!-- Hero -->
 <header class="hero">
