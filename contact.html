@@ -103,7 +103,134 @@
             font-size: 1.8rem;
             cursor: pointer;
         }
+/* ===== CONTACT FORM MODERN ===== */
+.contact-wrapper {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  animation: fadeUp .8s ease;
+}
 
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+.contact-wrapper h2 {
+  text-align:center;
+  margin-bottom: 24px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  transition: .3s;
+}
+
+.field textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.field label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+  transition: .3s;
+  background: #fff;
+  padding: 0 6px;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #3f72ff;
+}
+
+.field input:focus + label,
+.field textarea:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 12px;
+  color: #3f72ff;
+}
+
+/* BUTTON */
+.contact-btn {
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:#1877F2;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+  position: relative;
+}
+
+.contact-btn.loading {
+  pointer-events:none;
+  background:#ccc;
+}
+
+.spinner {
+  width:20px;
+  height:20px;
+  border:3px solid rgba(255,255,255,.4);
+  border-top-color:#fff;
+  border-radius:50%;
+  animation:spin .8s linear infinite;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  display:none;
+}
+
+@keyframes spin {
+  to {transform:rotate(360deg) translate(-50%,-50%);}
+}
+
+/* SUCCESS MESSAGE */
+.success-msg {
+  display:none;
+  text-align:center;
+  padding:30px 20px;
+  animation:fadeUp .6s ease;
+}
+
+.success-msg h3 {
+  color:#3f72ff;
+  margin-bottom:10px;
+}
+
+/* HONEYPOT */
+.hp-field {
+  display:none !important;
+}
+
+@media(max-width:600px){
+  .contact-wrapper {margin:20px;}
+}
         @media (min-width: 768px) {
             .nav-menu {
                 display: flex;
@@ -561,11 +688,44 @@ max-width: 1280px;
 <section class="section">
     <p>
         Got questions, feedback, or need help? We're here for you.
-        Feel free to reach out using the form below or via email.
+        Feel free to reach out using the form below or via email: <strong>Email:</strong> support@pindl.online</strong>
     </p>
 
-    <p><strong>Email:</strong> support@pindl.online</p>
+    <p>
+<div class="contact-wrapper">
+  <h2>Hubungi Kami</h2>
 
+  <form name="contact-form" target="hidden_iframe" onsubmit="return submitContact();">
+
+    <!-- HONEYPOT (ANTI SPAM BOT) -->
+    <input type="text" name="website" class="hp-field">
+
+    <div class="field">
+      <input type="text" name="name" required placeholder=" ">
+      <label>Nama</label>
+    </div>
+
+    <div class="field">
+      <input type="email" name="email" required placeholder=" ">
+      <label>Email</label>
+    </div>
+
+    <div class="field">
+      <textarea name="message" required placeholder=" "></textarea>
+      <label>Pesan</label>
+    </div>
+
+    <button class="contact-btn" id="submitBtn">
+      <span class="btn-text">Kirim Pesan</span>
+      <div class="spinner"></div>
+    </button>
+  </form>
+
+  <div class="success-msg" id="successMsg">
+    <h3>Pesan Terkirim 🎉</h3>
+    <p>Terima kasih telah menghubungi kami.<br>Kami akan membalas secepatnya.</p>
+  </div>
+</div>
    
 </section>
 
